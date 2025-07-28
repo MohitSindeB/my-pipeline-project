@@ -2,21 +2,21 @@ pipeline {
     agent { label 'Windows_11_Home' }
 
     stages {
-        stage('Clone') {
+        stage('Stage 1') {
             steps {
-                echo 'Cloning repo...'
+                echo 'hi'
             }
         }
 
-        stage('Run Script') {
+        stage('Stage 2') {
             steps {
-                bat 'python3 hello.py'
+                echo 'hi'
             }
         }
 
-        stage('Archive') {
+        stage('Stage 3') {
             steps {
-                archiveArtifacts artifacts: '**/*.py', fingerprint: true
+                echo 'hi'
             }
         }
     }
