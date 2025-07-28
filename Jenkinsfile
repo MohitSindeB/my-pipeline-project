@@ -1,22 +1,19 @@
 pipeline {
-    agent { label 'Windows_11_Home' }
-
+    agent any
     stages {
-        stage('Stage 1') {
+        stage('Build') {
             steps {
-                echo 'hi'
+                echo 'Building...'
             }
         }
-
-        stage('Stage 2') {
+        stage('Test') {
             steps {
-                echo 'hi'
+                echo 'Testing...'
             }
         }
-
-        stage('Stage 3') {
+        stage('Deploy') {
             steps {
-                echo 'hi'
+                echo 'Deploying...'
             }
         }
     }
